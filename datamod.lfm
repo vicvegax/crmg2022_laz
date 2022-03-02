@@ -1,0 +1,26 @@
+object DM: TDM
+  OnCreate = DataModuleCreate
+  OldCreateOrder = False
+  Height = 485
+  HorizontalOffset = 518
+  VerticalOffset = 157
+  Width = 574
+  PPI = 120
+  object DBCON: TSQLite3Connection
+    Connected = False
+    LoginPrompt = False
+    DatabaseName = 'C:\prjLazarus\rcb001\compiled\bdados.db'
+    KeepConnection = False
+    Transaction = DBTRANS
+    AlwaysUseBigint = False
+    Left = 40
+    Top = 24
+  end
+  object DBTRANS: TSQLTransaction
+    Active = False
+    Action = caCommit
+    Database = DBCON
+    Left = 40
+    Top = 114
+  end
+end

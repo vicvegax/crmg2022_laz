@@ -1,0 +1,53 @@
+object fUsuario: TfUsuario
+  Left = 453
+  Height = 639
+  Top = 186
+  Width = 1000
+  Align = alClient
+  Caption = 'Cadastro'
+  ClientHeight = 639
+  ClientWidth = 1000
+  DesignTimePPI = 120
+  LCLVersion = '2.2.0.4'
+  object DBGrid1: TDBGrid
+    Left = 0
+    Height = 352
+    Top = 0
+    Width = 1000
+    Align = alTop
+    Color = clWindow
+    Columns = <>
+    TabOrder = 0
+  end
+  object Label1: TLabel
+    Left = 16
+    Height = 20
+    Top = 373
+    Width = 114
+    Caption = 'Nome Completo:'
+  end
+  object edDescr: TEdit
+    Left = 144
+    Height = 28
+    Top = 365
+    Width = 360
+    OnChange = edDescrChange
+    TabOrder = 1
+    TextHint = '(Nome Completo)'
+  end
+  object Label2: TLabel
+    Left = 800
+    Height = 20
+    Top = 373
+    Width = 40
+    Caption = 'Ident.:'
+  end
+  object edID: TEdit
+    Left = 856
+    Height = 28
+    Top = 365
+    Width = 100
+    TabOrder = 2
+    TextHint = '(NOVO)'
+  end
+end
