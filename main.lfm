@@ -391,7 +391,7 @@ object fMain: TfMain
     Left = 16
     Height = 128
     Top = 488
-    Width = 208
+    Width = 200
     Caption = 'Verificando Atualizações!'
     Font.CharSet = ANSI_CHARSET
     Font.Color = clRed

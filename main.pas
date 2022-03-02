@@ -108,7 +108,7 @@ begin
   Screen.Cursor:= crHourglass;
   btATU.Enabled:= false;
   pnATU.Height:= 350;
-  pnATU.Width:= 500;
+  pnATU.Width:= 800;
   pnATU.Left:= (Self.Width - pnAtu.Width) div 2;
   pnATU.Top:= (Self.Height - pnAtu.Height) div 2;
   pnATU.Show;
