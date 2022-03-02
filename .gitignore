@@ -2,3 +2,5 @@
 backup/*.*
 compiled/crmg2022.exe
 lib/x86_64-win64/*.*
+sqlite3.dll
+compiled/crmg2022.dbg

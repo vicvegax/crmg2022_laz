@@ -18,7 +18,9 @@ type
     acExc: TAction;
     acConf: TAction;
     ActionList1: TActionList;
+    btAtu: TButton;
     LazAutoUpdate1: TLazAutoUpdate;
+    pnAtu: TPanel;
     pnPag: TPanel;
     pnAcao: TPanel;
     pnCap: TPanel;
@@ -37,6 +39,7 @@ type
     procedure acConfExecute(Sender: TObject);
     procedure acModoExecute(Sender: TObject);
     procedure btPesClick(Sender: TObject);
+    procedure btAtuClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure btCadastroClick(Sender: TObject);
     procedure pnPagClick(Sender: TObject);
@@ -63,6 +66,19 @@ uses cadUsuario, funcoes, cadpessoal;
 
 procedure TfMain.FormCreate(Sender: TObject);
 begin
+with LazAutoUpdate1 do begin
+  VersionsININame:='crmg2022.ini';
+  ZipfileName:='crmg2022.zip';
+  CopyTree:=False;
+  ShowDialogs:=False;
+  UpdatesFolder:='updates';
+  DebugMode:= true;
+  ProjectType:= auGitHubReleaseZip; //precisa ficar antes do Git***** - 09/02/2022
+  GitHubBranchOrTag:= 'main';
+  GitHubProjectname:='vicvegax';
+  GitHubRepositoryName:= 'crmg2022_laz';
+end;
+fMain.Caption := fMain.caption + ' v' + LazAutoUpdate1.AppVersion;
 
 end;
 
@@ -84,6 +100,22 @@ end;
 
 procedure TfMain.btPesClick(Sender: TObject);
 begin
+
+end;
+
+procedure TfMain.btAtuClick(Sender: TObject);
+begin
+  Screen.Cursor:= crHourglass;
+  btATU.Enabled:= false;
+  pnATU.Height:= 350;
+  pnATU.Width:= 500;
+  pnATU.Left:= (Self.Width - pnAtu.Width) div 2;
+  pnATU.Top:= (Self.Height - pnAtu.Height) div 2;
+  pnATU.Show;
+  LazAutoUpdate1.AutoUpdate;
+  pnATU.Hide;
+  btATU.Enabled:= true;
+  Screen.Cursor:= crDefault;
 
 end;
 

@@ -4,7 +4,7 @@ object fUsuario: TfUsuario
   Top = 186
   Width = 1000
   Align = alClient
-  Caption = 'Cadastro'
+  Caption = 'Cadastro de Usuários'
   ClientHeight = 639
   ClientWidth = 1000
   DesignTimePPI = 120

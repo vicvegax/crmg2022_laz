@@ -17,11 +17,11 @@ uses
 
 begin
   RequireDerivedFormResource:=True;
+  Application.Title:='CRMG 2022';
   Application.Scaled:=True;
   Application.Initialize;
-  Application.CreateForm(TfMain, fMain);
   Application.CreateForm(TDM, DM);
-  Application.CreateForm(TfUsuario1, fUsuario1);
+  Application.CreateForm(TfMain, fMain);
   Application.Run;
 end.
 

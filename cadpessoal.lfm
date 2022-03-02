@@ -1,2 +1,3 @@
 inherited fPessoal: TfPessoal
+  Caption = 'Cadastro de Pessoal'
 end

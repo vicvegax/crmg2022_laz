@@ -32,7 +32,8 @@ implementation
 
 procedure TDM.DataModuleCreate(Sender: TObject);
 begin
-
+  DBCON.DatabaseName:= ExtractFilePath(ParamStr(0)) + '\dados.db';
+  DBCON.Connected:= true;
 end;
 
 end.

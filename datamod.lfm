@@ -9,7 +9,7 @@ object DM: TDM
   object DBCON: TSQLite3Connection
     Connected = False
     LoginPrompt = False
-    DatabaseName = 'C:\prjLazarus\rcb001\compiled\bdados.db'
+    DatabaseName = 'D:\Projetos\Lazarus\crmg2022_laz\compiled\dados.db'
     KeepConnection = False
     Transaction = DBTRANS
     AlwaysUseBigint = False
